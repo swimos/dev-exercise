@@ -13,7 +13,7 @@ The application is deliberately trivial, and the exercise is intended to show ho
 Protocol
 --------
 
-The application consists of two components, a client and a server. There will be one instance of the server but there maybe be multiple instances of the client connected to the same server. The clients and server communicate over TCP. The clients are stateless, and the state of the server is a single signed, 64-bit integer. The initial value of the state is 0.
+The application consists of two components, a client and a server. There will be one instance of the server but there may be multiple instances of the client connected to the same server. The clients and server communicate over TCP. The clients are stateless, and the state of the server is a single signed, 64-bit integer. The initial value of the state is 0.
 
 The messages that can be sent from the client to the server are as follows:
 
