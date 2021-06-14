@@ -64,20 +64,9 @@ Single Client:
 Multiple Clients:
 
 Client 1
-```
-> { "command": "set", "value": 1 }
-> { "command": "set", "value": 3 }
-> { "command": "set", "value": 5 }
-```
 
-Client 2
-```
-> { "command": "set", "value": 2 }
-> { "command": "set", "value": 4 }
-> { "command": "set", "value": 6 }
-```
+(Here the 'subscribe' command is executed before clients 2 and 3 are started.)
 
-Client 1
 ```
 > { "command": "subscribe" }
 { "value": 1 }
@@ -88,6 +77,20 @@ Client 1
 { "value": 6 }
 ```
 
+Client 2
+```
+> { "command": "set", "value": 1 }
+> { "command": "set", "value": 3 }
+> { "command": "set", "value": 5 }
+```
+
+Client 3
+```
+> { "command": "set", "value": 2 }
+> { "command": "set", "value": 4 }
+> { "command": "set", "value": 6 }
+```
+
 (Note that the exact message and order received would vary depending on the order the commands are entered on the clients).
 
 Sharing the Solution
@@ -95,3 +98,5 @@ Sharing the Solution
 Please place your solution under git source control somewhere it can be shared with us (for example Github). You should have instructions on who should be given access in the e-mail that directed you to these instructions.
 
 Please give instructions on how your application should be executed, in a README file in the repository.
+
+Priority should be given to correctness, robustness and clarity.
